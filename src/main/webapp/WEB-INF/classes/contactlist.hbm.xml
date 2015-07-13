@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.me.spring.pojo">
+ 
+  <class name="Contactlist" table="contactlist">
+  <id name="id" column="id" type="integer">
+      <generator class="native"></generator>  
+  </id>
+  <property name="user" column="user" type="string"></property> <!-- name represents bean; column represents db --> 
+  <property name="contact" column="contact" type="string"></property>
+  </class>    
+</hibernate-mapping>

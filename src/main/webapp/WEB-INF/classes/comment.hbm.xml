@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.me.spring.pojo">
+ 
+  <class name="Comment" table="comment">
+  <id name="id" column="id" type="integer">
+      <generator class="native"></generator>  
+  </id>
+  <property name="content" column="content" type="string"></property> <!-- name represents bean; column represents db --> 
+   <many-to-one class="com.me.spring.pojo.User" column="user"  name="user" not-null="true"/>
+   <many-to-one class="com.me.spring.pojo.Photo" column="photo"  name="photo" not-null="true"/>
+  </class>    
+</hibernate-mapping>

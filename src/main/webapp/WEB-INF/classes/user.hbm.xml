@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.me.spring.pojo">
+ 
+  <class name="User" table="user">
+  <id name="id" column="id" type="integer">
+      <generator class="native"></generator>  
+  </id>
+  <property name="account" column="account" type="string"></property> <!-- name represents bean; column represents db --> 
+  <property name="address" column="address" type="string"></property>
+  <property name="email" column="email" type="string"></property>
+  <property name="gender" column="gender" type="string"></property>
+  <property name="interest" column="interest" type="string"></property> <!-- name represents bean; column represents db --> 
+  <property name="mainpage" column="mainpage" type="string"></property>
+  <property name="msn" column="msn" type="string"></property>
+  <property name="name" column="name" type="string"></property>
+  <property name="password" column="password" type="string"></property> <!-- name represents bean; column represents db --> 
+  <property name="validatepassword" column="validatepassword" type="string"></property>
+  </class>    
+</hibernate-mapping>
